@@ -34,7 +34,7 @@ Biologist by training — landscape connectivity modelling in R — now working 
 
 The write-ups above are drawn from two years of in-house work at a location-data company whose code is not mine to publish. The main things built there, described generically:
 
-- **An operator-driven audit pipeline** that validates a brand's data coverage against external store counts, auto-corrects safe metadata gaps where it can, triggers duplicate and chain-assignment reports, and populates a client-deliverable sample. Twenty numbered steps and a core layer of single-purpose modules. The three-layer verification contract from `llm-verification-patterns` is the pipeline's highest-priority rule.
+- **An operator-driven audit pipeline** that validates a brand's data coverage against external store counts, auto-corrects safe metadata gaps where it can, triggers duplicate and chain-assignment reports, and populates a client-deliverable sample. Twenty numbered steps and a core layer of single-purpose modules. The three-layer verification contract from `llm-verification-patterns` is the pipeline's highest-priority rule. Audits ran across markets in Europe, Asia and the Americas, which made per-country context rules and cross-language name handling — including non-Latin scripts and right-to-left text — part of the pipeline rather than an afterthought.
 - **Post-export validation layers** running in front of every client deliverable, in the order described in `data-validation-architecture`: field invariants, schema conformance, value profiling, pattern scan, three-way congruence.
 - **Internal tooling** to support both, including an MCP server the team uses from Claude Code and Claude Desktop as a front end for the operational tool catalogue.
 
