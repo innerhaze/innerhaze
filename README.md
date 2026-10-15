@@ -18,7 +18,7 @@ Biologist by training — landscape connectivity modelling in R — now working 
 
 ### Selected work
 
-**[Mobility catchment analysis](#)** — Comparative study of grid-based and adaptive geometry for measuring real-world catchment areas from device location data. Visit detection by point-in-polygon, rule-based segmentation without ground truth, and a hexagonal grid measured against convex and concave hulls. Write-up covers method, validation reasoning, and what I would do differently.
+**[Mobility catchment analysis](https://github.com/innerhaze/mobility-catchment-analysis)** — Comparative study of grid-based and adaptive geometry for measuring real-world catchment areas from device location data. Visit detection by point-in-polygon, rule-based segmentation without ground truth, and a hexagonal grid measured against convex and concave hulls. Write-up covers method, validation reasoning, and what I would do differently.
 
 **Connectivity modelling in Andean páramos** — My thesis work and the R tooling around it: generalised dissimilarity modelling of evolutionary divergence against historical connectivity, DEM reclassification from paleoclimatic data, and an R–Java integration that automates Graphab cost-surface processing across runs.
 
@@ -32,4 +32,4 @@ Biologist by training — landscape connectivity modelling in R — now working 
 
 ---
 
-📍 Medellín, Colombia · 📧 sebasadmon@gmail.com · [LinkedIn](https://www.linkedin.com/in/sebastian-sanchez-cuartas-02231a335/)
+📍 Medellín, Colombia · 📧 sebasadmon@gmail.com · [LinkedIn](https://www.linkedin.com/in/sebastian-sanchez-cuartas)
