@@ -1,6 +1,6 @@
 # Sebastián Sánchez Cuartas
 
-Hired as an early-career analyst at a location-data company to execute a sample-production process that already existed and to do quality control over geospatial deliverables. After a year of running the process by hand, I wrote two design documents proposing to automate it, and built what the documents proposed. I ended the role as the sole author of the pipeline that produces the company's client samples. The write-ups below are the pieces of that work that generalise.
+Hired as an early-career analyst at a location-data company to execute a sample-production process that already existed and to do quality control over geospatial deliverables. After a year of running the process by hand, I wrote two design documents proposing to automate it, and built what the documents proposed. I ended the role as the sole author of the pipeline that produces the company's client samples. The day-to-day of that role was solutions engineering for the pre-sales function: the client requirement reached me through the sales team, I produced the validated deliverable, and I built the systems that decided when it was ready. The write-ups below are the pieces of that work that generalise.
 
 ### What I actually do
 
@@ -42,15 +42,17 @@ Spatial data at growing scale and consequence, from a research collection, to la
 
 **Teaching Assistant**, Botany and Animal Biology, Universidad de Antioquia (2019–2024). Five years explaining technical material to people who did not produce it.
 
-**National Application Team Member**, Mil Mujeres Foundation (US nonprofit, remote, April 2021–March 2022). Reviewed legal documentation for applicants in the United States, in English, with a US-based team. Five years of professional work in English, not two.
+**National Application Team Member**, Mil Mujeres Foundation (US nonprofit, remote, April 2021–March 2022). Reviewed legal documentation for applicants in the United States, in English, with a US-based team.
 
 **Undergraduate thesis** on evolutionary divergence and historical connectivity in the Northern Andean páramos during the Pleistocene. Landscape connectivity modelling in R: cost rasters, a Graphab–R integration, a GDM analysis. The smaller repositories around that work are summarised in [paramo-thesis-summary](https://github.com/innerhaze/paramo-thesis-summary).
+
+Professional work in English with US-based organisations since 2021.
 
 ---
 
 ### Tools
 
-`Python` `SQL` `R` · `PostGIS` `Shapely` `H3` `QGIS` `Graphab` · `pandas` `NumPy` `SciPy` · `pytest` `Git`
+`Python` `SQL` `R` · `PostGIS` `Shapely` `GeoPandas` `H3` `QGIS` `Graphab` · `pandas` `Polars` `NumPy` `SciPy` · `pytest` `Git`
 
 ---
 
