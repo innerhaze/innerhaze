@@ -36,13 +36,21 @@ Operational rules the team learned the hard way turn into executable registries 
 
 ### Earlier work
 
-Landscape connectivity modelling in R for a thesis on evolutionary divergence and historical connectivity in the Northern Andean páramos during the Pleistocene. Methodology, cost rasters, a Graphab–R integration, and the GDM analysis are in a set of smaller repositories, summarised in [paramo-thesis-summary](https://github.com/innerhaze/paramo-thesis-summary).
+Spatial data at growing scale and consequence, from a research collection, to landscape connectivity, to commercial location data, to the systems that produce it.
+
+**Georeferencing Specialist**, Universidad de Antioquia (March–September 2023). Georeferenced collection points for the institutional entomological collection's digitisation, under documented positional-accuracy and traceability criteria. This is where spatial data stopped being a method inside a thesis and started being the job.
+
+**Teaching Assistant**, Botany and Animal Biology, Universidad de Antioquia (2019–2024). Five years explaining technical material to people who did not produce it.
+
+**National Application Team Member**, Mil Mujeres Foundation (US nonprofit, remote, April 2021–March 2022). Reviewed legal documentation for applicants in the United States, in English, with a US-based team. Five years of professional work in English, not two.
+
+**Undergraduate thesis** on evolutionary divergence and historical connectivity in the Northern Andean páramos during the Pleistocene. Landscape connectivity modelling in R: cost rasters, a Graphab–R integration, a GDM analysis. The smaller repositories around that work are summarised in [paramo-thesis-summary](https://github.com/innerhaze/paramo-thesis-summary).
 
 ---
 
 ### Tools
 
-`Python` `SQL` `R` · `PostGIS` `GeoPandas` `Shapely` `H3` `QGIS` `Graphab` · `pandas` `Polars` `NumPy` `SciPy` · `pytest` `Git`
+`Python` `SQL` `R` · `PostGIS` `Shapely` `H3` `QGIS` `Graphab` · `pandas` `NumPy` `SciPy` · `pytest` `Git`
 
 ---
 
