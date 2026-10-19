@@ -43,14 +43,17 @@ to do when a service does not behave the way the team assumes.
 
 **[operator-driven-pipelines](https://github.com/innerhaze/operator-driven-pipelines)**
 Designing a pipeline for a domain expert to run rather than an engineer to maintain.
-Preflight ahead of execution, punch-lists instead of mid-run prompts, failure modes
-that a non-engineer can act on.
+Preflight ahead of execution, punch-lists instead of mid-run questions, and the argument
+for when an automated decision is justified at all: only when a downstream check bounds
+the cost of getting it wrong.
 
 **[paramo-thesis-summary](https://github.com/innerhaze/paramo-thesis-summary)**
-Landscape connectivity modelling in Andean páramo: movement-cost surfaces from a
-digital elevation model and a paleoclimatic reconstruction, graph metrics across
-nineteen habitat configurations, results related to genetic divergence with a
-generalised dissimilarity model.
+Whether connectivity between Andean páramo fragments, which shifted through the
+Pleistocene, can still be read in how Espeletiinae lineages diverged. It can: historical
+connectivity explains divergence better than straight-line distance once patches are far
+apart. Movement-cost surfaces from elevation and a paleoclimatic reconstruction, graph
+metrics in Graphab across nineteen habitat configurations, a generalised dissimilarity
+model in R. Links out to four repositories holding the code for each step.
 
 ---
 
@@ -62,10 +65,10 @@ question: coverage of a brand in a market, a category across countries, where a
 store's customers come from. I decided whether it could, produced the sample or the
 analysis that answered it, and set the standard for whether it shipped.
 
-That ran to about 126 sample deliveries across more than a dozen markets in North
-America, Europe, Asia, Latin America and the Middle East. After eighteen months of
+That ran to roughly 126 sample intakes across more than a dozen markets in North
+America, Europe, Asia, Latin America and the Middle East. After a year and a half of
 doing the audits by hand I automated them, and ended up sole author of the pipeline
-that replaced the manual process — 208 commits, around 1,400 tests.
+that replaced the manual process — 208 commits, roughly 1,400 test functions.
 
 The longest thread was the validation that runs on every export before a client opens
 it: fifteen months, three codebases, a repository migration in between. I wrote three
