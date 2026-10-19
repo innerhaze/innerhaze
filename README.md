@@ -1,59 +1,96 @@
 # Sebastián Sánchez Cuartas
 
-Hired as an early-career analyst at a location-data company to execute a sample-production process that already existed and to do quality control over geospatial deliverables. After a year of running the process by hand, I wrote two design documents proposing to automate it, and built what the documents proposed. I ended the role as the sole author of the pipeline that produces the company's client samples. The day-to-day of that role was solutions engineering for the pre-sales function: the client requirement reached me through the sales team, I produced the validated deliverable, and I built the systems that decided when it was ready. The write-ups below are the pieces of that work that generalise.
+I work on the quality side of commercial location data: deciding whether a dataset
+can answer the question someone is asking, and building the checks that make that
+answer hold.
 
-### What I actually do
-
-Validation layers that sit between a dataset and a client. Some I inherited and extended, some I designed. The ones I designed are value-level distribution profiling, record-level pattern scans, and a three-way congruence check across database, delivery export, and post-delivery scan. The ones I inherited and extended are the field-level invariants and the schema conformance checks.
-
-Alongside that: an LLM-assisted review path that is only trusted on a write once a deterministic re-derivation agrees with it; mutation guards for a shared production table that cannot be migrated; and the piece most people don't publish about, codifying domain knowledge as executable configuration, so that rules learned from real incidents don't live in anyone's head.
-
-### Where I come from
-
-A biology degree with a thesis on landscape connectivity modelling in R: cost rasters, Graphab, a GDM analysis of evolutionary divergence in the Northern Andean páramos during the Pleistocene. That background is why I think about spatial data the way I do, polygons, distances and topology before dashboards.
-
-### What is different about the way I work
-
-Operational rules the team learned the hard way turn into executable registries with the originating incident attached. A specific chain whose records got mis-tagged a particular way becomes a line in a registry, not tribal knowledge in a channel. A container-plus-tenant merge collision becomes a pattern-scan rule, not a story told once at an onboarding. The registry carries its own history, and the next person who runs the pipeline reads it instead of being told.
+Most of what I build at work is private. What is here is the method, rewritten
+from scratch against synthetic data so it can be read and run.
 
 ---
 
-### Selected work
+## What's here
 
-**[mobility-catchment-analysis](https://github.com/innerhaze/mobility-catchment-analysis)** — Comparative study of grid-based and adaptive geometry for measuring real-world catchment areas from device location data. Visit detection by point-in-polygon, rule-based segmentation without ground truth, a hexagonal grid measured against convex and concave hulls, and a synthetic reproduction of the method.
+**[mobility-catchment-analysis](https://github.com/innerhaze/mobility-catchment-analysis)**
+Where a store's customers come from, and how to tell staff from customers in device
+data with nothing labelled. Compares a fixed H3 grid against convex and concave hulls
+fitted to the observed points, and explains why the grid imposes a shape the data does
+not have. Runnable reproduction with synthetic pings, three figures and an interactive
+map.
 
-**[data-validation-architecture](https://github.com/innerhaze/data-validation-architecture)** — The validation stack that sits in front of a client-facing data delivery, in the order it runs: field-level invariants, schema conformance, value-level distribution profiling, pattern scans at the record level, and a three-way congruence check against the database. Each layer only sees what the previous one accepted. A scope note delimits which layers are my design and which I inherited and extended.
+**[data-validation-architecture](https://github.com/innerhaze/data-validation-architecture)**
+The five-layer stack that ran in front of every client export: field invariants, schema
+conformance, value-level profiling, record-level pattern scans, three-way database to
+export congruence. Written in the order the layers run, with the reasoning for the
+order and the defect classes each one caught.
 
-**[llm-verification-patterns](https://github.com/innerhaze/llm-verification-patterns)** — Design notes on using a language model for per-record judgment without trusting any individual verdict. A three-layer contract, reviewer, deterministic verifier, sampling audit, that catches record-level mistakes, batch-level drift, and the long tail of wrong-at-high-confidence outputs that a threshold filter lets through.
+**[llm-verification-patterns](https://github.com/innerhaze/llm-verification-patterns)**
+When a model's verdict can be trusted enough to write to production. A reviewer, an
+independent deterministic check that re-derives the decision from the numbers, and a
+sampling audit that halts the batch on disagreement. Includes why a confidence
+threshold does not solve this, and when to replace the model with a static rule.
 
-**[safe-mutation-patterns](https://github.com/innerhaze/safe-mutation-patterns)** — Writing to a shared production table when you cannot add constraints or change the schema. A typed-reason mutation guard, deterministic-key idempotency without a migration, timeout classes picked by call site, and the discipline of documenting a service assumption that turned out to be wrong.
+**[domain-rules-as-config](https://github.com/innerhaze/domain-rules-as-config)**
+Expert judgment written down as executable configuration instead of living in one
+person's head. Rule registries that carry their own rationale, market context as
+structured input rather than prose in a prompt, and the cases where the system should
+stop and ask rather than decide.
 
-**[operator-driven-pipelines](https://github.com/innerhaze/operator-driven-pipelines)** — Design choices for a pipeline whose primary user is a human who knows the domain. Preflight that reports what manual actions are needed, execution that never asks a question mid-run, a punch-list at the end instead of modals, and the documentation suite a one-author system needs to survive a hand-off.
+**[safe-mutation-patterns](https://github.com/innerhaze/safe-mutation-patterns)**
+Writing to a shared production table you do not own and cannot migrate. Typed-reason
+guards, idempotency through a deterministic hash, per-query-class timeouts, and what
+to do when a service does not behave the way the team assumes.
 
-**[domain-rules-as-config](https://github.com/innerhaze/domain-rules-as-config)** — Design notes on where operational knowledge about a specific domain lives inside a data pipeline. Executable registries that run before the language model, rules that carry the originating incident with them, market context as structured input rather than prompt preamble, and an archetype pattern for routing records the automation is not qualified to resolve.
+**[operator-driven-pipelines](https://github.com/innerhaze/operator-driven-pipelines)**
+Designing a pipeline for a domain expert to run rather than an engineer to maintain.
+Preflight ahead of execution, punch-lists instead of mid-run prompts, failure modes
+that a non-engineer can act on.
+
+**[paramo-thesis-summary](https://github.com/innerhaze/paramo-thesis-summary)**
+Landscape connectivity modelling in Andean páramo: movement-cost surfaces from a
+digital elevation model and a paleoclimatic reconstruction, graph metrics across
+nineteen habitat configurations, results related to genetic divergence with a
+generalised dissimilarity model.
 
 ---
 
-### Earlier work
+## Where this comes from
 
-Spatial data at growing scale and consequence, from a research collection, to landscape connectivity, to commercial location data, to the systems that produce it.
+Two years as the pre-sales data analyst at a location-data company. A prospective
+customer would ask, through the sales team, whether our data could answer their
+question: coverage of a brand in a market, a category across countries, where a
+store's customers come from. I decided whether it could, produced the sample or the
+analysis that answered it, and set the standard for whether it shipped.
 
-**Georeferencing Specialist**, Universidad de Antioquia (March–September 2023). Georeferenced collection points for the institutional entomological collection's digitisation, under documented positional-accuracy and traceability criteria. This is where spatial data stopped being a method inside a thesis and started being the job.
+That ran to about 126 sample deliveries across more than a dozen markets in North
+America, Europe, Asia, Latin America and the Middle East. After eighteen months of
+doing the audits by hand I automated them, and ended up sole author of the pipeline
+that replaced the manual process — 208 commits, around 1,400 tests.
 
-**Teaching Assistant**, Botany and Animal Biology, Universidad de Antioquia (2019–2024). Five years explaining technical material to people who did not produce it.
-
-**National Application Team Member**, Mil Mujeres Foundation (US nonprofit, remote, April 2021–March 2022). Reviewed legal documentation for applicants in the United States, in English, with a US-based team.
-
-**Undergraduate thesis** on evolutionary divergence and historical connectivity in the Northern Andean páramos during the Pleistocene. Landscape connectivity modelling in R: cost rasters, a Graphab–R integration, a GDM analysis. The smaller repositories around that work are summarised in [paramo-thesis-summary](https://github.com/innerhaze/paramo-thesis-summary).
-
-Professional work in English with US-based organisations since 2021.
-
----
-
-### Tools
-
-`Python` `SQL` `R` · `PostGIS` `Shapely` `GeoPandas` `H3` `QGIS` `Graphab` · `pandas` `Polars` `NumPy` `SciPy` · `pytest` `Git`
+The longest thread was the validation that runs on every export before a client opens
+it: fifteen months, three codebases, a repository migration in between. I wrote three
+of its five layers and extended the two that were already there.
 
 ---
 
-Medellín, Colombia · sebasadmon@gmail.com · [LinkedIn](https://www.linkedin.com/in/sebastian-sanchez-cuartas)
+## Before that
+
+A biologist. The thesis above is where the habits came from: a number that looks
+plausible is not the same as a number that is right.
+
+Georeferencing for a university entomological collection, 2023, which is where spatial
+data stopped being a thesis method and became the work. Five years as a teaching
+assistant in botany and animal biology. A year reviewing legal documentation in English
+for a US non-profit, which is why I have been working in English since 2021.
+
+---
+
+## Tools
+
+`Python` `SQL` `R` · `PostGIS` `Shapely` `GeoPandas` `H3` `alphashape` `OSMnx` `QGIS` `Graphab` · `pandas` `Polars` `NumPy` `SciPy` · `pytest` `Git`
+
+---
+
+## Contact
+
+Medellín, Colombia · [sebasadmon@gmail.com](mailto:sebasadmon@gmail.com) · [LinkedIn](https://www.linkedin.com/in/sebastian-sanchez-cuartas)
