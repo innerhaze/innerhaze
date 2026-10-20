@@ -68,7 +68,7 @@ analysis that answered it, and set the standard for whether it shipped.
 That ran to roughly 126 sample intakes across more than a dozen markets in North
 America, Europe, Asia, Latin America and the Middle East. After a year and a half of
 doing the audits by hand I automated them, and ended up sole author of the pipeline
-that replaced the manual process — 208 commits, roughly 1,400 test functions.
+that replaced the manual process.
 
 The longest thread was the validation that runs on every export before a client opens
 it: fifteen months, three codebases, a repository migration in between. I wrote three
@@ -78,13 +78,13 @@ of its five layers and extended the two that were already there.
 
 ## Before that
 
-A biologist. The thesis above is where the habits came from: a number that looks
-plausible is not the same as a number that is right.
+A biologist, Universidad de Antioquia. The thesis above is where the habits came
+from: a number that looks plausible is not the same as a number that is right. The
+four repositories it links to are the code for each step — the only substantial code
+here that is not a synthetic reproduction.
 
 Georeferencing for a university entomological collection, 2023, which is where spatial
-data stopped being a thesis method and became the work. Five years as a teaching
-assistant in botany and animal biology. A year reviewing legal documentation in English
-for a US non-profit, which is why I have been working in English since 2021.
+data stopped being a thesis method and became the work.
 
 ---
 
@@ -97,3 +97,4 @@ for a US non-profit, which is why I have been working in English since 2021.
 ## Contact
 
 Medellín, Colombia · [sebasadmon@gmail.com](mailto:sebasadmon@gmail.com) · [LinkedIn](https://www.linkedin.com/in/sebastian-sanchez-cuartas)
+
