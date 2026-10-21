@@ -19,7 +19,7 @@ not have. Runnable reproduction with synthetic pings, three figures and an inter
 map.
 
 **[data-validation-architecture](https://github.com/innerhaze/data-validation-architecture)**
-The five-layer stack that ran in front of every client export: field invariants, schema
+The five-layer stack that ran in front of a client export: field invariants, schema
 conformance, value-level profiling, record-level pattern scans, three-way database to
 export congruence. Written in the order the layers run, with the reasoning for the
 order and the defect classes each one caught.
@@ -67,11 +67,11 @@ analysis that answered it, and set the standard for whether it shipped.
 
 That ran to roughly 126 sample intakes across more than a dozen markets in North
 America, Europe, Asia, Latin America and the Middle East. After a year and a half of
-doing the audits by hand I automated them, and ended up sole author of the pipeline
-that replaced the manual process.
+doing the audits by hand I automated them, and ended up sole author of that pipeline.
+It was one thread of the role, not the role.
 
-The longest thread was the validation that runs on every export before a client opens
-it: fifteen months, three codebases, a repository migration in between. I wrote three
+The longest-running system I owned was the validation that runs before a client opens
+an export: fifteen months, three codebases, a repository migration in between. I wrote three
 of its five layers and extended the two that were already there.
 
 ---
@@ -79,12 +79,13 @@ of its five layers and extended the two that were already there.
 ## Before that
 
 A biologist, Universidad de Antioquia. The thesis above is where the habits came
-from: a number that looks plausible is not the same as a number that is right. The
-four repositories it links to are the code for each step — the only substantial code
-here that is not a synthetic reproduction.
+from: a number that looks plausible is not the same as a number that is right. It was
+the last thing I did before the location-data work. The four repositories it links to
+are the code for each step: the only substantial code here that is not a synthetic
+reproduction.
 
-Georeferencing for a university entomological collection, 2023, which is where spatial
-data stopped being a thesis method and became the work.
+Georeferencing for a university entomological collection in 2023, during the degree,
+was my first paid work with spatial data.
 
 ---
 
@@ -97,4 +98,3 @@ data stopped being a thesis method and became the work.
 ## Contact
 
 Medellín, Colombia · [sebasadmon@gmail.com](mailto:sebasadmon@gmail.com) · [LinkedIn](https://www.linkedin.com/in/sebastian-sanchez-cuartas)
-
